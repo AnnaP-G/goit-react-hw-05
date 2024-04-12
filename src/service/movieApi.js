@@ -9,6 +9,33 @@ axios.defaults.params = {
   language: "en-US",
 };
 
+// список найпопулярніших фільмів
+export const getTrendingMovies = async () => {
+  const { data } = await axios.get("/trending/movie/day");
+  console.log(data);
+  return data.results;
+};
 
+// пошук фільму за ключовим словом
+export const getMoviesByQuery = async () => {
+  const { data } = await axios.get(`/search/movie?query=${query}`);
+  return data.results;
+};
 
-export const getTrendingMovie
+// повна інформація про фільм
+export const getMovieDetails = async () => {
+  const { data } = await axios.get(`/movie/${movieId}`);
+  return data.results;
+};
+
+// запит про акторський склад
+export const getMovieCredits = async () => {
+  const { data } = await axios.get(`/movie/${movieId}/credits`);
+  return data.results;
+};
+
+// запит ревю
+export const getMovieReviews = async () => {
+  const { data } = await axios.get(`/movie/${movieId}/reviews`);
+  return data.results;
+};
