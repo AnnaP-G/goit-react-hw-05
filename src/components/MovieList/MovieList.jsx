@@ -1,20 +1,14 @@
-import { Link } from "react-router-dom";
+import GridMovies from "../GridMovies/GridMovies";
+import GridMoviesItem from "../GridMoviesItem/GridMoviesItem";
 
 const MovieList = ({ movies }) => {
-  console.log(movies);
   return (
-    <div>
-      <ul>
-        {Array.isArray(movies) &&
-          movies.map((movie) => {
-            return (
-              <li key={movie.id}>
-                <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-              </li>
-            );
-          })}
-      </ul>
-    </div>
+    <GridMovies>
+      {Array.isArray(movies) &&
+        movies.map((movie) => {
+          return <GridMoviesItem key={movie.id} movie={movie} />;
+        })}
+    </GridMovies>
   );
 };
 

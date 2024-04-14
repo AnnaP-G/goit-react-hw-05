@@ -7,7 +7,8 @@ import Navigation from "./components/Navigation/Navigation.jsx";
 
 const App = () => {
   return (
-    <Navigation>
+    <>
+      <Navigation />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -16,7 +17,7 @@ const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-    </Navigation>
+    </>
   );
 };
 
