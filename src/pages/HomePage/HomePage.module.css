@@ -1,5 +1,11 @@
+.boxTrend {
+    text-align: center;
+
+}
+
 .title {
-    font-size: 40px;
+    color: rgb(30, 8, 92);
+    font-size: 30px;
     margin-bottom: 10px;
     padding: 10px;
 }

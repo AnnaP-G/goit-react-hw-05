@@ -17,7 +17,7 @@ export const getTrendingMovies = async () => {
 
 // пошук фільму за ключовим словом
 export const getMoviesByQuery = async (query) => {
-  const { data } = await axios.get(`/search/movie?query=${query}, ${page}`);
+  const { data } = await axios.get(`/search/movie?query=${query}`);
   return data.results;
 };
 

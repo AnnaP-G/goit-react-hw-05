@@ -1,8 +1,7 @@
+import css from "./GridMoviesItem.module.css";
+
 const GridMoviesItem = ({ children }) => {
-  return <li>{children}</li>;
-  // <li key={movie.id}>
-  //   <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-  // </li>
+  return <li className={css.link}>{children}</li>;
 };
 
 export default GridMoviesItem;

@@ -6,6 +6,7 @@ import css from "./HomePage.module.css";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
+  console.log(movies);
   const [error, setError] = useState(false);
   const [loader, setLoader] = useState(false);
 
@@ -26,7 +27,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className={css.boxTrend}>
       <h1 className={css.title}>Trending movies</h1>
       {loader && <Loader />}
       {error && <p className={css.error}>{error}</p>}

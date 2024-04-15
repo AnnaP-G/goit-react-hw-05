@@ -21,7 +21,14 @@
     text-decoration: none;
     background-color: rgb(215, 214, 231);
     color: rgb(118, 38, 9);
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+    background-color: rgba(110, 67, 203, 0.482);
 }
 
 .detailsList {
