@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { getMovieDetails } from "../../service/movieApi";
 import Loader from "../../components/Loader/Loader";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
+import css from "./MovieDetailsPage.module.css";
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -33,16 +34,22 @@ const MovieDetailsPage = () => {
   return (
     <div>
       {loader && <Loader />}
-      {error && <p>{error}</p>}
-      <Link to={backLink.current}>Go back</Link>
+      {error && <p className={css.error}>{error}</p>}
+      <Link className={css.link} to={backLink.current}>
+        Go back
+      </Link>
       {movies && <MovieDetails movies={movies} />}
-      <div>
-        <ul>
+      <div className={css.additionalDetails}>
+        <ul className={css.detailsList}>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link className={css.link} to="cast">
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <Link className={css.link} to="reviews">
+              Reviews
+            </Link>
           </li>
         </ul>
       </div>

@@ -3,6 +3,7 @@ import MoviesSearchForm from "../../components/MoviesSearchForm/MoviesSearchForm
 import { getMoviesByQuery } from "../../service/movieApi";
 import Loader from "../../components/Loader/Loader";
 import MovieList from "../../components/MovieList/MovieList";
+import css from "./MoviesPage.module.css";
 
 const MoviesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -37,7 +38,7 @@ const MoviesPage = () => {
       <MoviesSearchForm onSubmit={onSubmit} />
       <MovieList movies={movies} />
       {loader && <Loader />}
-      {error && <p>{error}</p>}
+      {error && <p className={css.error}>{error}</p>}
     </div>
   );
 };

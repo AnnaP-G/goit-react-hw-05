@@ -8,7 +8,7 @@ const addNavLinkActiveClass = ({ isActive }) =>
 
 const Navigation = () => {
   return (
-    <header>
+    <header className={css.header}>
       <nav className={css.nav}>
         <NavLink className={addNavLinkActiveClass} to="/">
           Home

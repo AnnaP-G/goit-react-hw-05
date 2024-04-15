@@ -1,3 +1,12 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    /* background-color: rgb(124, 122, 177); */
+    margin-bottom: 20px;
+    border-bottom:4px solid rgb(118, 38, 9)
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -9,8 +18,9 @@
     display: flex;    
     text-decoration: none;
     color: black;
+    font-size: 30px;
 }
 
 .active {
-    color: red;
+    color: rgb(118, 38, 9);
 }

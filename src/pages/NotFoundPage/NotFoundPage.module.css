@@ -1,0 +1,32 @@
+.boxNotFound {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 40px;
+    color: rgb(118, 38, 9);
+    text-decoration: overline;
+
+}
+
+.linkHome {
+    display: flex;
+        width: 120px;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        font-size: 18px;
+        color: black;
+        border: 2px solid rgb(118, 38, 9);
+        border-radius: 30px;
+        text-decoration: none;
+        background-color: rgb(172, 169, 249);
+        color: rgb(118, 38, 9);
+        margin: 0 auto;
+}

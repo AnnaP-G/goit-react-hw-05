@@ -1,0 +1,31 @@
+.movieBox {
+    display: flex;
+    gap: 20px;
+}
+
+.imgPoster {
+    width: 300px;
+}
+
+.boxDescription {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    color: rgb(15, 15, 44) ;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.titleGenres, .titleOverview {
+    font-size: 18px;
+}
+
+.textGenres, .textOverview{
+    font-size: 16px;
+}
+
+.userStore, .runtime {
+    color:rgb(118, 38, 9);
+}

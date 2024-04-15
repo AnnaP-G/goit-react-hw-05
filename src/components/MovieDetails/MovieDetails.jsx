@@ -1,3 +1,5 @@
+import css from "./MovieDetails.module.css";
+
 const MovieDetails = ({ movies }) => {
   const {
     genres = [],
@@ -14,9 +16,10 @@ const MovieDetails = ({ movies }) => {
     "https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg";
 
   return (
-    <div>
+    <div className={css.movieBox}>
       <div>
         <img
+          className={css.imgPoster}
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w500/${poster_path}`
@@ -25,14 +28,18 @@ const MovieDetails = ({ movies }) => {
           alt={title}
         />
       </div>
-      <div>
-        <h2>{`${title} (${release_date.split("-")[0]})`}</h2>
-        <h3>Genres</h3>
-        <p>{genres.map((gen) => gen.name).join(", ")}</p>
-        <p>{`User Store: ${vote_average}`}</p>
-        <h4>Overview</h4>
-        <p>{overview}</p>
-        <p>{`Runtime: ${runtime} min`}</p>
+      <div className={css.boxDescription}>
+        <h2 className={css.title}>{`${title} (${
+          release_date.split("-")[0]
+        })`}</h2>
+        <h3 className={css.titleGenres}>Genres</h3>
+        <p className={css.textGenres}>
+          {genres.map((gen) => gen.name).join(", ")}
+        </p>
+        <p className={css.userStore}>{`User Store: ${vote_average}`}</p>
+        <h4 className={css.titleOverview}>Overview</h4>
+        <p className={css.textOverview}>{overview}</p>
+        <p className={css.runtime}>{`Runtime: ${runtime} min`}</p>
         <p>
           {production_countries.some(
             (country) =>
