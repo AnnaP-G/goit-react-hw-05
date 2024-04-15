@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import MoviesSearchForm from "../components/MoviesSearchForm/MoviesSearchForm";
-import { getMoviesByQuery } from "../service/movieApi";
-import Loader from "../components/Loader/Loader";
-import MovieList from "../components/MovieList/MovieList";
+import MoviesSearchForm from "../../components/MoviesSearchForm/MoviesSearchForm";
+import { getMoviesByQuery } from "../../service/movieApi";
+import Loader from "../../components/Loader/Loader";
+import MovieList from "../../components/MovieList/MovieList";
 
 const MoviesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");

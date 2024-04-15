@@ -23,14 +23,14 @@ export const getMoviesByQuery = async (query) => {
 
 // повна інформація про фільм
 export const getMovieDetails = async (movieId) => {
-  const { data } = await axios.get(`/movie/${movieId}`);
-  return data.results;
+  const { data } = await axios.get(`movie/${movieId}`);
+  return data;
 };
 
 // запит про акторський склад
 export const getMovieCredits = async (movieId) => {
   const { data } = await axios.get(`/movie/${movieId}/credits`);
-  return data.results;
+  return data.cast;
 };
 
 // запит ревю
