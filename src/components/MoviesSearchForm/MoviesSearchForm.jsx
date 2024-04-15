@@ -1,10 +1,15 @@
+import { useState } from "react";
+
 const MoviesSearchForm = ({ onSubmit }) => {
+  const [query, setQuery] = useState("");
+
+  const handleInputChange = (evt) => {
+    setQuery(evt.target.value);
+  };
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    const searchValue = evt.currentTarget.elements.searchForm.value.trim();
-    if (!searchValue) return;
-    onSubmit(searchValue);
-    evt.currentTarget.reset();
+    onSubmit(query);
   };
 
   return (
@@ -13,6 +18,7 @@ const MoviesSearchForm = ({ onSubmit }) => {
         type="text"
         name="searchForm"
         placeholder="What are we looking for?"
+        onChange={handleInputChange}
       />
       <button type="submit">Search</button>
     </form>
